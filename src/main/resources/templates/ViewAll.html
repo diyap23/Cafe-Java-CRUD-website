@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/ViewStyles.css}">
+</head>
+<body>
+
+<h2>All Stores</h2>
+<table border="1">
+    <tr>
+        <th>Store ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Opening Hours</th>
+        <th>No. of Employees</th>
+        <th>Description</th>
+    </tr>
+    <tr th:each="s : ${stores}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.storeName}"></td>
+        <td th:text="${s.storeAddress}"></td>
+        <td th:text="${s.storeOpeningHours}"></td>
+        <td th:text="${s.noOfEmployees}"></td>
+        <td th:text="${s.description}"></td>
+    </tr>
+</table>
+
+<h2>All Employees</h2>
+<table border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Assigned Store Name</th>
+        <th>Job Title</th>
+        <th>Shift Date</th>
+        <th>Shift Time</th>
+        <th>Salary</th>
+        <th>Working Hours</th>
+        <th>Store ID</th>
+    </tr>
+    <tr th:each="e : ${employees}">
+        <td th:text="${e.id}"></td>
+        <td th:text="${e.employeeName}"></td>
+        <td th:text="${e.store.storeName}"></td>
+        <td th:text="${e.jobTitle}"></td>
+        <td th:text="${e.shiftDate}"></td>
+        <td th:text="${e.shiftTime}"></td>
+        <td th:text="${e.salary}"></td>
+        <td th:text="${e.workingHours}"></td>
+        <td th:text="${e.store.id}"></td>
+    </tr>
+</table>
+<br>
+<div class="backtoHomeandAdd">
+<a th:href="@{/}">Go back to Home Page</a><br>
+<br>
+<a th:href="@{/addStore}">Go to Add Store</a><br>
+<br>
+<a th:href="@{/addEmployee}"> Go to Add Employees</a><br>
+<br>
+<a th:href="@{/viewStores}">Go to View All Employees by Store</a><br>
+<br>
+</div>
+</body>
+</html>

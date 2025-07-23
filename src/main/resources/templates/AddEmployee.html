@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Add Employee</title>
+<link rel="stylesheet" th:href="@{/css/AddEmployeeStyles.css}">
+</head>
+<body>
+<h1>Add Employee</h1>
+<p>Add the employee details</p>
+<form th:action="@{/addEmployee}" th:object="${employee}" method="post">
+Employee Name: <input type="text" th:field="*{employeeName}" placeholder="Enter the Employee Name" required><br>
+Date : <input type="date" th:field="*{shiftDate}"><br>
+Shift Start Time : <input type="time" th:field="*{shiftTime}"><br>
+Job Title : <input type="text" th:field="*{jobTitle}"><br>
+Salary : <input type="number" th:field=*{salary} step="0.01"><br>
+Store: 
+<select name="storeId">
+<option th:each="s : ${stores}" th:value="${s.id}" th:text="${s.storeName}"></option>
+</select><br>
+<input type="submit" value="Add Employee">
+</form>
+<div class="backtoHomeandView">
+<a th:href="@{/}">Go back to Home Page</a><br>
+<br>
+<a th:href="@{/addStore}">Go back to Add Store</a><br>
+<br>
+<a th:href="@{/viewStores}">Go to View All Employees by Store</a><br>
+<br>
+<a th:href="@{/viewAll}">Go back to View All Employees & Store</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Cookfee Management Homepage</title>
+<link rel="stylesheet" th:href="@{/css/homeStyle.css}">
+</head>
+<body>
+
+<header>
+<img th:src="@{/img/cafeLogo.png}" alt="Cafe Logo" class="logo">
+<h1>Welcome to <span class="store-name">Cookfee Café</span> Management Page</h1>
+<p>Because managing a cafe should as smooth as Cookfee latte!! </p>
+</header>
+
+<nav class="navigation">
+<a th:href="@{/addStore}">Add New Stores</a>
+<a th:href="@{/addEmployee}">Add New Employees</a>
+<a th:href="@{/viewStores}">View Stores and Employees</a>
+<a th:href="@{/viewAll}">View Employees</a>
+</nav>
+
+<main>
+
+<section class="inside-cafe">
+<h2>Inside <span class="store-name">Cookfee Café</span></h2>
+<p class="inside-cafe-para">Take a glimpse of what's inside Cookfee Cafe and what makes Cookfee café the comforting café</p>
+<div class="photo-gallery">
+
+<div class="photos">
+<img th:src="@{/img/barista.jpg}" alt="barista img">
+<p>Our skilled barista's making sure you have the best Cookfee experience.</p>
+</div>
+
+<div class="photos">
+<img th:src="@{/img/baristaCounter.jpg}" alt="barista counter">
+<p>Our barista's working counter.</p>
+</div>
+
+<div class="photos">
+<img th:src="@{/img/cafeInterior.jpg}" alt="cafe interior">
+<p>Interior that bring comfort to our customer.</p>
+</div>
+
+<div class="photos">
+<img th:src="@{/img/cafeMenu.jpg}" alt="cafe menu">
+<p>Our special menu.</p>
+</div>
+</div>
+</section>
+
+<section class="features">
+<h2>Cookfee Café Mangement Features</h2>
+<ul>
+<li>Add and manage stores.</li>
+<li>Track employees and their schedules.</li>
+<li>Manage stores and employees scheduling.</li>
+<li>Simple and easy user experience.</li>
+</ul>
+</section>
+</main>
+
+<footer>
+<p>&copy Cookfee Café 2025</p>
+</footer>
+</body>
+</html>

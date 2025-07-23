@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+	background-color: #ebddc5;
+	color: #741e11;
+	font-family: 'inter', sans-serif;
+}
+
+h1 {
+	background-color: #e5a32e;
+	padding: 2rem;
+	text-align: center;
+}
+
+p {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	padding-top: 5px;
+}
+
+form {
+	margin: 50px auto;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+     width: 100%;
+}
+
+.addStore-container {
+	display: block;
+    height:80vh; 
+    position: relative;
+}
+
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 2px solid  #741e11;
+	border-radius: 5px;	
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+a{
+	text-decoration: none;
+	color: #741e11;
+	font-weight: bold;
+}
+
+
+.backtoHomeandView{
+	text-align: center;
+}
